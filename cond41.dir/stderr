@@ -1,0 +1,5 @@
+configure.ac:5: error: AM_COND_IF: no such condition "BAD_COND"
+/private/tmp/homebrew-automake-HEAD-mfsB/m4/cond-if.m4:39: AM_COND_IF is expanded from...
+configure.ac:5: the top level
+autom4te: /usr/bin/m4 failed with exit status: 1
+aclocal: error: autom4te failed with exit status: 1

@@ -1,0 +1,6 @@
+Testsuite output from automake-1.11a on OSX Lion with XCode-4.3.1.
+Two tests are failing atm.  One is probably an XFail due to an old
+makeinfo-4.8, and the other one is uploaded here.
+
+FAIL: cond41.test
+
