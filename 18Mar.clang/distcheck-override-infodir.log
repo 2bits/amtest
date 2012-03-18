@@ -1,0 +1,189 @@
+Running from installcheck: no
+Using TAP: no
+PATH = /private/tmp/homebrew-automake-HEAD-998s/tests/ax:/private/tmp/homebrew-automake-HEAD-998s/tests/wrap:/usr/local/Cellar/libffi/3.0.10/bin:/usr/local/Cellar/gettext/0.18.1.1/bin:/usr/local/bin:/usr/local/sbin:/usr/local/texlive/2011/bin/x86_64-darwin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/Library/Contributions/examples
+distcheck-override-infodir: running makeinfo --version
+makeinfo (GNU texinfo) 4.8
+
+Copyright (C) 2004 Free Software Foundation, Inc.
+There is NO warranty.  You may redistribute this software
+under the terms of the GNU General Public License.
+For more information about these matters, see the files named COPYING.
+distcheck-override-infodir: running texi2dvi --version
+texi2dvi (GNU Texinfo 4.8) 1.34
+
+Copyright (C) 2004 Free Software Foundation, Inc.
+There is NO warranty.  You may redistribute this software
+under the terms of the GNU General Public License.
+For more information about these matters, see the files named COPYING.
+distcheck-override-infodir: running install-info --version
+install-info (GNU texinfo) 4.8
+
+Copyright (C) 2004 Free Software Foundation, Inc.
+There is NO warranty.  You may redistribute this software
+under the terms of the GNU General Public License.
+For more information about these matters, see the files named COPYING.
+++ pwd
+/private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir
++ cat
++ cat
++ cat
++ aclocal-1.11a -Werror
++ automake-1.11a --foreign -Werror -Wall -a
+Makefile.am:2: installing './texinfo.tex'
++ autoconf
++ ./configure
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... ./install-sh -c -d
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
++ make
+restore=: && backupdir=".am$$" && \
+	am__cwd=`pwd` && CDPATH="${ZSH_VERSION+.}:" && cd . && \
+	rm -rf $backupdir && mkdir $backupdir && \
+	if (/bin/sh /private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/missing --run makeinfo --version) >/dev/null 2>&1; then \
+	  for f in main.info main.info-[0-9] main.info-[0-9][0-9] main.i[0-9] main.i[0-9][0-9]; do \
+	    if test -f $f; then mv $f $backupdir; restore=mv; else :; fi; \
+	  done; \
+	else :; fi && \
+	cd "$am__cwd"; \
+	if /bin/sh /private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/missing --run makeinfo   -I . \
+	 -o main.info main.texi; \
+	then \
+	  rc=0; \
+	  CDPATH="${ZSH_VERSION+.}:" && cd .; \
+	else \
+	  rc=$?; \
+	  CDPATH="${ZSH_VERSION+.}:" && cd . && \
+	  $restore $backupdir/* `echo "./main.info" | sed 's|[^/]*$||'`; \
+	fi; \
+	rm -rf $backupdir; exit $rc
++ make distcheck
+make  dist-gzip am__post_remove_distdir='@:'
+if test -d "distcheck-override-infodir-1.0"; then find "distcheck-override-infodir-1.0" -type d ! -perm -200 -exec chmod u+w {} ';' && rm -rf "distcheck-override-infodir-1.0" || { sleep 5 && rm -rf "distcheck-override-infodir-1.0"; }; else :; fi
+test -d "distcheck-override-infodir-1.0" || mkdir "distcheck-override-infodir-1.0"
+make  \
+	  top_distdir="distcheck-override-infodir-1.0" distdir="distcheck-override-infodir-1.0" \
+	  dist-info
+test -n "" \
+	|| find "distcheck-override-infodir-1.0" -type d ! -perm -755 \
+		-exec chmod u+rwx,go+rx {} \; -o \
+	  ! -type d ! -perm -444 -links 1 -exec chmod a+r {} \; -o \
+	  ! -type d ! -perm -400 -exec chmod a+r {} \; -o \
+	  ! -type d ! -perm -444 -exec /bin/sh /private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/install-sh -c -m a+r {} {} \; \
+	|| chmod -R a+r "distcheck-override-infodir-1.0"
+tardir=distcheck-override-infodir-1.0 && ${TAR-tar} chof - "$tardir" | GZIP=--best gzip -c >distcheck-override-infodir-1.0.tar.gz
+if test -d "distcheck-override-infodir-1.0"; then find "distcheck-override-infodir-1.0" -type d ! -perm -200 -exec chmod u+w {} ';' && rm -rf "distcheck-override-infodir-1.0" || { sleep 5 && rm -rf "distcheck-override-infodir-1.0"; }; else :; fi
+case 'distcheck-override-infodir-1.0.tar.gz' in \
+	*.tar.gz*) \
+	  GZIP=--best gzip -dc distcheck-override-infodir-1.0.tar.gz | ${TAR-tar} xf - ;;\
+	*.tar.bz2*) \
+	  bzip2 -dc distcheck-override-infodir-1.0.tar.bz2 | ${TAR-tar} xf - ;;\
+	*.tar.lz*) \
+	  lzip -dc distcheck-override-infodir-1.0.tar.lz | ${TAR-tar} xf - ;;\
+	*.tar.xz*) \
+	  xz -dc distcheck-override-infodir-1.0.tar.xz | ${TAR-tar} xf - ;;\
+	*.tar.Z*) \
+	  uncompress -c distcheck-override-infodir-1.0.tar.Z | ${TAR-tar} xf - ;;\
+	*.shar.gz*) \
+	  GZIP=--best gzip -dc distcheck-override-infodir-1.0.shar.gz | unshar ;;\
+	*.zip*) \
+	  unzip distcheck-override-infodir-1.0.zip ;;\
+	esac
+chmod -R a-w distcheck-override-infodir-1.0; chmod a+w distcheck-override-infodir-1.0
+mkdir distcheck-override-infodir-1.0/_build
+mkdir distcheck-override-infodir-1.0/_inst
+chmod a-w distcheck-override-infodir-1.0
+test -d distcheck-override-infodir-1.0/_build || exit 0; \
+	dc_install_base=`CDPATH="${ZSH_VERSION+.}:" && cd distcheck-override-infodir-1.0/_inst && pwd | sed -e 's,^[^:\\/]:[\\/],/,'` \
+	  && dc_destdir="${TMPDIR-/tmp}/am-dc-$$/" \
+	  && am__cwd=`pwd` \
+	  && CDPATH="${ZSH_VERSION+.}:" && cd distcheck-override-infodir-1.0/_build \
+	  && ../configure --srcdir=.. --prefix="$dc_install_base" \
+	     \
+	     \
+	  && make  \
+	  && make  dvi \
+	  && make  check \
+	  && make  install \
+	  && make  installcheck \
+	  && make  uninstall \
+	  && make  distuninstallcheck_dir="$dc_install_base" \
+	        distuninstallcheck \
+	  && chmod -R a-w "$dc_install_base" \
+	  && ({ \
+	       (cd ../.. && umask 077 && mkdir "$dc_destdir") \
+	       && make  DESTDIR="$dc_destdir" install \
+	       && make  DESTDIR="$dc_destdir" uninstall \
+	       && make  DESTDIR="$dc_destdir" \
+	            distuninstallcheck_dir="$dc_destdir" distuninstallcheck; \
+	      } || { rm -rf "$dc_destdir"; exit 1; }) \
+	  && rm -rf "$dc_destdir" \
+	  && make  dist \
+	  && rm -rf distcheck-override-infodir-1.0.tar.gz \
+	  && make  distcleancheck \
+	  && cd "$am__cwd" \
+	  || exit 1
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... ../install-sh -c -d
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+make[1]: Nothing to be done for `all'.
+TEXINPUTS="..:$TEXINPUTS" \
+	MAKEINFO='/bin/sh /private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/distcheck-override-infodir-1.0/missing --run makeinfo   -I ..' \
+	texi2dvi  ../main.texi 
+sed: 2: "s/\(^\|.* \)@documenten ...": whitespace after branch
+sed: 4: "s/\(^\|.* \)@documenten ...": whitespace after label
+sed: 6: "s/\(^\|.* \)@documenten ...": undefined label 'found                                                '
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011)
+ restricted \write18 enabled.
+entering extended mode
+
+(/private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/
+distcheck-override-infodir-1.0/main.texi
+(/private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/
+distcheck-override-infodir-1.0/texinfo.tex
+Loading texinfo [version 2012-03-11.15]: pdf, fonts, markup, glyphs,
+page headings, tables, conditionals, indexing, sectioning, toc, environments,
+defuns, macros, cross references, insertions,
+(/usr/local/texlive/2011/texmf-dist/tex/generic/epsf/epsf.tex
+This is `epsf.tex' v2.7.4 <14 February 2011>
+) localization, formatting, and turning on texinfo input format.) [1] )
+Output written on main.dvi (1 page, 212 bytes).
+Transcript written on main.log.
+make[1]: Nothing to be done for `check'.
+make[2]: Nothing to be done for `install-exec-am'.
+test -z "/private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/distcheck-override-infodir-1.0/_inst/blah/blah/foobar" || ../install-sh -c -d "/private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/distcheck-override-infodir-1.0/_inst/blah/blah/foobar"
+ /usr/bin/install -c -m 644 ../main.info '/private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/distcheck-override-infodir-1.0/_inst/blah/blah/foobar'
+ install-info --info-dir='/private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/distcheck-override-infodir-1.0/_inst/blah/blah/foobar' '/private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/distcheck-override-infodir-1.0/_inst/blah/blah/foobar/main.info'
+install-info: warning: no info dir entry in `/private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/distcheck-override-infodir-1.0/_inst/blah/blah/foobar/main.info'
+if test x${infodir+set} != xset; then \
+	  ls -l "/private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/distcheck-override-infodir-1.0/_inst/blah/blah/foobar/" || exit 1; \
+	  test -f "/private/tmp/homebrew-automake-HEAD-998s/tests/distcheck-override-infodir.dir/distcheck-override-infodir-1.0/_inst/blah/blah/foobar/dir" || exit 1; \
+	else \
+	  ls -l "$infodir/" || exit 1; \
+	  test -f "$infodir/dir" || exit 1; \
+	fi
+total 8
+-rw-r--r--  1 nibbles  wheel  172 Mar 18 11:09 main.info
+make[1]: *** [installcheck-local] Error 1
+make: *** [distcheck] Error 1
++ exit_status=2
++ set +e
++ cd /private/tmp/homebrew-automake-HEAD-998s/tests
++ test no = yes
++ case $am_explicit_skips in
++ test 2 -eq 0
++ keep_testdirs=yes
++ am_keeping_testdirs
++ case $keep_testdirs in
++ return 0
++ set +x
+distcheck-override-infodir: exit 2

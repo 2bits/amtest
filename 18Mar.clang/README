@@ -1,0 +1,7 @@
+automake 1.11a testsuite results on OSX 10.7.3 with XCode-4.3.1 using clang-3.1.318.
+
+FAIL: distcheck-override-infodir.test
+FAIL: python-pr10995.test
+
+The first one is an xfail I think.  The second is nab.
+Thanks for reading.

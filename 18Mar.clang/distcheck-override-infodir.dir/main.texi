@@ -1,0 +1,6 @@
+\input texinfo
+@setfilename main.info
+@settitle main
+@node Top
+Hello walls.
+@bye

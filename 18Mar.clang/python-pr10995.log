@@ -1,0 +1,28 @@
+Running from installcheck: no
+Using TAP: no
+PATH = /private/tmp/homebrew-automake-HEAD-998s/tests/ax:/private/tmp/homebrew-automake-HEAD-998s/tests/wrap:/usr/local/Cellar/libffi/3.0.10/bin:/usr/local/Cellar/gettext/0.18.1.1/bin:/usr/local/bin:/usr/local/sbin:/usr/local/texlive/2011/bin/x86_64-darwin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/Library/Contributions/examples
+python-pr10995: running python -V
+Python 2.7.1
+++ pwd
+/private/tmp/homebrew-automake-HEAD-998s/tests/python-pr10995.dir
++ set -e
++ cat
++ cat
++ echo 'def foo(): return 1'
++ echo if
++ aclocal-1.11a -Werror
+aclocal: warnings are treated as errors
+aclocal: warning: 'configure.ac' and 'configure.in' both present.
+aclocal: proceeding with 'configure.ac'
++ exit_status=1
++ set +e
++ cd /private/tmp/homebrew-automake-HEAD-998s/tests
++ test no = yes
++ case $am_explicit_skips in
++ test 1 -eq 0
++ keep_testdirs=yes
++ am_keeping_testdirs
++ case $keep_testdirs in
++ return 0
++ set +x
+python-pr10995: exit 1

@@ -1,0 +1,3 @@
+AC_INIT([python-pr10995], [1.0])
+AM_INIT_AUTOMAKE
+AC_CONFIG_FILES([Makefile])
